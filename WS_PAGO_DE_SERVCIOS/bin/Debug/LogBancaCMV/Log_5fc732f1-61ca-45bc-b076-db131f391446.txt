@@ -1,0 +1,9 @@
+fecha: 12/08/2020Hora: 09:15 a. m.
+ Error: No se puede escribir en EventVier 
+No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Para crear el origen, necesita permiso para leer todos los registros de eventos con el fin de comprobar que el nuevo nombre de origen es único. Registros inaccesibles: Security.
+   en System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)
+   en System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)
+   en System.Diagnostics.EventLogInternal.VerifyAndCreateSource(String sourceName, String currentMachineName)
+   en System.Diagnostics.EventLogInternal.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)
+   en System.Diagnostics.EventLog.WriteEntry(String message, EventLogEntryType type)
+   en ws_pago_de_servicios_utilidades.Logg.Logg.Info(String mensaje) en C:\Users\pegc837648\Desktop\Proyectos\Banca\ws_pagodeServicios\ws_pago_de_servicios_utilidades\Logg\Logg.cs:línea 38

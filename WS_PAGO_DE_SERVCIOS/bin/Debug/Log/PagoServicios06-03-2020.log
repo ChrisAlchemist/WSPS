@@ -1,0 +1,484 @@
+2020-03-06 17:05:31,088INFO  LogRequest                                        - 
+Mensaje de Salida (Response): 
+
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+	<s:Header>
+		<a:Action s:mustUnderstand="1">http://schemas.xmlsoap.org/ws/2004/09/transfer/GetResponse</a:Action>
+		<a:RelatesTo>urn:uuid:b90968bb-bf0d-4f8a-ae1f-335852233310</a:RelatesTo>
+	</s:Header>
+	<s:Body>
+		<Metadata xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex">
+			<wsx:MetadataSection xmlns="" Dialect="http://schemas.xmlsoap.org/wsdl/" Identifier="http://tempuri.org/">
+				<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" name="PagoDeServicios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+					<wsdl:types>
+						<xsd:schema targetNamespace="http://tempuri.org/Imports">
+							<xsd:import namespace="http://tempuri.org/" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" />
+							<xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" />
+							<xsd:import namespace="http://schemas.datacontract.org/2004/07/" />
+						</xsd:schema>
+					</wsdl:types>
+					<wsdl:message name="IPagoDeServicios_PagarServicio_InputMessage">
+						<wsdl:part name="parameters" element="tns:PagarServicio" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_PagarServicio_OutputMessage">
+						<wsdl:part name="parameters" element="tns:PagarServicioResponse" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_PagarServicio__ExceptionPagarServiciosFault_FaultMessage">
+						<wsdl:part name="detail" xmlns:q1="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" element="q1:_ExceptionPagarServicios" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultarSaldoSerivicio_InputMessage">
+						<wsdl:part name="parameters" element="tns:ConsultarSaldoSerivicio" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultarSaldoSerivicio_OutputMessage">
+						<wsdl:part name="parameters" element="tns:ConsultarSaldoSerivicioResponse" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultarSaldoSerivicio__ExceptionPagarServiciosFault_FaultMessage">
+						<wsdl:part name="detail" xmlns:q2="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" element="q2:_ExceptionPagarServicios" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConfirmaTransaccion_InputMessage">
+						<wsdl:part name="parameters" element="tns:ConfirmaTransaccion" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConfirmaTransaccion_OutputMessage">
+						<wsdl:part name="parameters" element="tns:ConfirmaTransaccionResponse" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConfirmaTransaccion__ExceptionPagarServiciosFault_FaultMessage">
+						<wsdl:part name="detail" xmlns:q3="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" element="q3:_ExceptionPagarServicios" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultaProductos_InputMessage">
+						<wsdl:part name="parameters" element="tns:ConsultaProductos" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultaProductos_OutputMessage">
+						<wsdl:part name="parameters" element="tns:ConsultaProductosResponse" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_ConsultaProductos__ExceptionPagarServiciosFault_FaultMessage">
+						<wsdl:part name="detail" xmlns:q4="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" element="q4:_ExceptionPagarServicios" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_GenerarToken_InputMessage">
+						<wsdl:part name="parameters" element="tns:GenerarToken" />
+					</wsdl:message>
+					<wsdl:message name="IPagoDeServicios_GenerarToken_OutputMessage">
+						<wsdl:part name="parameters" element="tns:GenerarTokenResponse" />
+					</wsdl:message>
+					<wsdl:portType name="IPagoDeServicios">
+						<wsdl:operation name="PagarServicio">
+							<wsdl:input wsaw:Action="http://tempuri.org/IPagoDeServicios/PagarServicio" message="tns:IPagoDeServicios_PagarServicio_InputMessage" />
+							<wsdl:output wsaw:Action="http://tempuri.org/IPagoDeServicios/PagarServicioResponse" message="tns:IPagoDeServicios_PagarServicio_OutputMessage" />
+							<wsdl:fault wsaw:Action="http://tempuri.org/IPagoDeServicios/PagarServicio_ExceptionPagarServiciosFault" name="_ExceptionPagarServiciosFault" message="tns:IPagoDeServicios_PagarServicio__ExceptionPagarServiciosFault_FaultMessage" />
+						</wsdl:operation>
+						<wsdl:operation name="ConsultarSaldoSerivicio">
+							<wsdl:input wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultarSaldoSerivicio" message="tns:IPagoDeServicios_ConsultarSaldoSerivicio_InputMessage" />
+							<wsdl:output wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultarSaldoSerivicioResponse" message="tns:IPagoDeServicios_ConsultarSaldoSerivicio_OutputMessage" />
+							<wsdl:fault wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultarSaldoSerivicio_ExceptionPagarServiciosFault" name="_ExceptionPagarServiciosFault" message="tns:IPagoDeServicios_ConsultarSaldoSerivicio__ExceptionPagarServiciosFault_FaultMessage" />
+						</wsdl:operation>
+						<wsdl:operation name="ConfirmaTransaccion">
+							<wsdl:input wsaw:Action="http://tempuri.org/IPagoDeServicios/ConfirmaTransaccion" message="tns:IPagoDeServicios_ConfirmaTransaccion_InputMessage" />
+							<wsdl:output wsaw:Action="http://tempuri.org/IPagoDeServicios/ConfirmaTransaccionResponse" message="tns:IPagoDeServicios_ConfirmaTransaccion_OutputMessage" />
+							<wsdl:fault wsaw:Action="http://tempuri.org/IPagoDeServicios/ConfirmaTransaccion_ExceptionPagarServiciosFault" name="_ExceptionPagarServiciosFault" message="tns:IPagoDeServicios_ConfirmaTransaccion__ExceptionPagarServiciosFault_FaultMessage" />
+						</wsdl:operation>
+						<wsdl:operation name="ConsultaProductos">
+							<wsdl:input wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultaProductos" message="tns:IPagoDeServicios_ConsultaProductos_InputMessage" />
+							<wsdl:output wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultaProductosResponse" message="tns:IPagoDeServicios_ConsultaProductos_OutputMessage" />
+							<wsdl:fault wsaw:Action="http://tempuri.org/IPagoDeServicios/ConsultaProductos_ExceptionPagarServiciosFault" name="_ExceptionPagarServiciosFault" message="tns:IPagoDeServicios_ConsultaProductos__ExceptionPagarServiciosFault_FaultMessage" />
+						</wsdl:operation>
+						<wsdl:operation name="GenerarToken">
+							<wsdl:input wsaw:Action="http://tempuri.org/IPagoDeServicios/GenerarToken" message="tns:IPagoDeServicios_GenerarToken_InputMessage" />
+							<wsdl:output wsaw:Action="http://tempuri.org/IPagoDeServicios/GenerarTokenResponse" message="tns:IPagoDeServicios_GenerarToken_OutputMessage" />
+						</wsdl:operation>
+					</wsdl:portType>
+					<wsdl:binding name="BasicHttpBinding_IPagoDeServicios" type="tns:IPagoDeServicios">
+						<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+						<wsdl:operation name="PagarServicio">
+							<soap:operation soapAction="http://tempuri.org/IPagoDeServicios/PagarServicio" style="document" />
+							<wsdl:input>
+								<soap:body use="literal" />
+							</wsdl:input>
+							<wsdl:output>
+								<soap:body use="literal" />
+							</wsdl:output>
+							<wsdl:fault name="_ExceptionPagarServiciosFault">
+								<soap:fault name="_ExceptionPagarServiciosFault" use="literal" />
+							</wsdl:fault>
+						</wsdl:operation>
+						<wsdl:operation name="ConsultarSaldoSerivicio">
+							<soap:operation soapAction="http://tempuri.org/IPagoDeServicios/ConsultarSaldoSerivicio" style="document" />
+							<wsdl:input>
+								<soap:body use="literal" />
+							</wsdl:input>
+							<wsdl:output>
+								<soap:body use="literal" />
+							</wsdl:output>
+							<wsdl:fault name="_ExceptionPagarServiciosFault">
+								<soap:fault name="_ExceptionPagarServiciosFault" use="literal" />
+							</wsdl:fault>
+						</wsdl:operation>
+						<wsdl:operation name="ConfirmaTransaccion">
+							<soap:operation soapAction="http://tempuri.org/IPagoDeServicios/ConfirmaTransaccion" style="document" />
+							<wsdl:input>
+								<soap:body use="literal" />
+							</wsdl:input>
+							<wsdl:output>
+								<soap:body use="literal" />
+							</wsdl:output>
+							<wsdl:fault name="_ExceptionPagarServiciosFault">
+								<soap:fault name="_ExceptionPagarServiciosFault" use="literal" />
+							</wsdl:fault>
+						</wsdl:operation>
+						<wsdl:operation name="ConsultaProductos">
+							<soap:operation soapAction="http://tempuri.org/IPagoDeServicios/ConsultaProductos" style="document" />
+							<wsdl:input>
+								<soap:body use="literal" />
+							</wsdl:input>
+							<wsdl:output>
+								<soap:body use="literal" />
+							</wsdl:output>
+							<wsdl:fault name="_ExceptionPagarServiciosFault">
+								<soap:fault name="_ExceptionPagarServiciosFault" use="literal" />
+							</wsdl:fault>
+						</wsdl:operation>
+						<wsdl:operation name="GenerarToken">
+							<soap:operation soapAction="http://tempuri.org/IPagoDeServicios/GenerarToken" style="document" />
+							<wsdl:input>
+								<soap:body use="literal" />
+							</wsdl:input>
+							<wsdl:output>
+								<soap:body use="literal" />
+							</wsdl:output>
+						</wsdl:operation>
+					</wsdl:binding>
+					<wsdl:service name="PagoDeServicios">
+						<wsdl:port name="BasicHttpBinding_IPagoDeServicios" binding="tns:BasicHttpBinding_IPagoDeServicios">
+							<soap:address location="http://localhost:8733/Design_Time_Addresses/WS_PAGO_DE_SERVCIOS/PagoDeServicios/" />
+						</wsdl:port>
+					</wsdl:service>
+				</wsdl:definitions>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://tempuri.org/">
+				<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" />
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses" />
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" />
+					<xs:element name="PagarServicio">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="request" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" type="q1:RequestPagarServicios" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PagarServicioResponse">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="PagarServicioResult" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses" type="q2:_ResponsePagarServicios" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConsultarSaldoSerivicio">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="requestPagarServicios" nillable="true" xmlns:q3="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" type="q3:RequestPagarServicios" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConsultarSaldoSerivicioResponse">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="ConsultarSaldoSerivicioResult" nillable="true" xmlns:q4="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" type="q4:_ResponseConsultaSaldo" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConfirmaTransaccion">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="requestPagarServicios" nillable="true" xmlns:q5="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" type="q5:RequestPagarServicios" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConfirmaTransaccionResponse">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="ConfirmaTransaccionResult" nillable="true" xmlns:q6="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" type="q6:_ResponseConfirmaTransaccion" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConsultaProductos">
+						<xs:complexType>
+							<xs:sequence />
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConsultaProductosResponse">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="ConsultaProductosResult" nillable="true" xmlns:q7="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" type="q7:_ResponseConsultaProductos" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="GenerarToken">
+						<xs:complexType>
+							<xs:sequence />
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="GenerarTokenResponse">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element minOccurs="0" name="GenerarTokenResult" nillable="true" type="xs:string" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.microsoft.com/2003/10/Serialization/">
+				<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:element name="anyType" nillable="true" type="xs:anyType" />
+					<xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+					<xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+					<xs:element name="boolean" nillable="true" type="xs:boolean" />
+					<xs:element name="byte" nillable="true" type="xs:byte" />
+					<xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+					<xs:element name="decimal" nillable="true" type="xs:decimal" />
+					<xs:element name="double" nillable="true" type="xs:double" />
+					<xs:element name="float" nillable="true" type="xs:float" />
+					<xs:element name="int" nillable="true" type="xs:int" />
+					<xs:element name="long" nillable="true" type="xs:long" />
+					<xs:element name="QName" nillable="true" type="xs:QName" />
+					<xs:element name="short" nillable="true" type="xs:short" />
+					<xs:element name="string" nillable="true" type="xs:string" />
+					<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+					<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+					<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+					<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+					<xs:element name="char" nillable="true" type="tns:char" />
+					<xs:simpleType name="char">
+						<xs:restriction base="xs:int" />
+					</xs:simpleType>
+					<xs:element name="duration" nillable="true" type="tns:duration" />
+					<xs:simpleType name="duration">
+						<xs:restriction base="xs:duration">
+							<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+							<xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+							<xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+						</xs:restriction>
+					</xs:simpleType>
+					<xs:element name="guid" nillable="true" type="tns:guid" />
+					<xs:simpleType name="guid">
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+						</xs:restriction>
+					</xs:simpleType>
+					<xs:attribute name="FactoryType" type="xs:QName" />
+					<xs:attribute name="Id" type="xs:ID" />
+					<xs:attribute name="Ref" type="xs:IDREF" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" />
+					<xs:complexType name="RequestPagarServicios">
+						<xs:sequence>
+							<xs:element name="ClabeCorresponsaliasRetiro" nillable="true" type="xs:string" />
+							<xs:element name="IdProducto" type="xs:int" />
+							<xs:element name="IdServicio" type="xs:int" />
+							<xs:element name="Monto" type="xs:decimal" />
+							<xs:element name="MontoComision" type="xs:decimal" />
+							<xs:element name="NumeroReferencia" nillable="true" type="xs:string" />
+							<xs:element name="NumeroSocio" nillable="true" type="xs:string" />
+							<xs:element name="Precio" type="xs:decimal" />
+							<xs:element name="Telefono" nillable="true" type="xs:string" />
+							<xs:element name="TipoFront" type="xs:int" />
+							<xs:element name="TipoOrigen" xmlns:q1="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q1:TipoOrigen" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="RequestPagarServicios" nillable="true" type="tns:RequestPagarServicios" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+					<xs:simpleType name="TipoOrigen">
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="MOVIL">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="SUCURSAL">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="BANCA_WEB_">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="DATABANKING">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+					<xs:element name="TipoOrigen" nillable="true" type="tns:TipoOrigen" />
+					<xs:simpleType name="EstatusCMV">
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Ok">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="Error">
+								<xs:annotation>
+									<xs:appinfo>
+										<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+					<xs:element name="EstatusCMV" nillable="true" type="tns:EstatusCMV" />
+					<xs:complexType name="ResponseAbonar">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="COMISION" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="COMISION_F" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="FECHA" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="ID_TX" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="MENSAJE" nillable="true" type="tns:RESPONSEMENSAJEABONAR" />
+							<xs:element minOccurs="0" name="MONTO" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="NUM_AUTORIZACION" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="SALDO" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="SALDO_F" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="ResponseAbonar" nillable="true" type="tns:ResponseAbonar" />
+					<xs:complexType name="RESPONSEMENSAJEABONAR">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="REFERENCIA" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="SALDOCLIENTE" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="TEXTO" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="legend" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="RESPONSEMENSAJEABONAR" nillable="true" type="tns:RESPONSEMENSAJEABONAR" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" />
+					<xs:complexType name="_ResponsePagarServicios">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="EstatusCmv" xmlns:q1="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q1:EstatusCMV" />
+							<xs:element minOccurs="0" name="MensajeCmv" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="ResponseAbonar" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q2:ResponseAbonar" />
+							<xs:element minOccurs="0" name="request" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="signed" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="_ResponsePagarServicios" nillable="true" type="tns:_ResponsePagarServicios" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:complexType name="_ExceptionPagarServicios">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="Codigo" type="xs:int" />
+							<xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="_ExceptionPagarServicios" nillable="true" type="tns:_ExceptionPagarServicios" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" />
+					<xs:import namespace="http://schemas.datacontract.org/2004/07/" />
+					<xs:complexType name="_ResponseConsultaSaldo">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="EstatusCmv" xmlns:q1="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q1:EstatusCMV" />
+							<xs:element minOccurs="0" name="MensajeCmv" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="ResponseAbonar" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q2:ResponseAbonar" />
+							<xs:element minOccurs="0" name="Signed" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="request" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="_ResponseConsultaSaldo" nillable="true" type="tns:_ResponseConsultaSaldo" />
+					<xs:complexType name="_ResponseConfirmaTransaccion">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="EstatusCmv" xmlns:q3="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q3:EstatusCMV" />
+							<xs:element minOccurs="0" name="MensajeCmv" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="ResponseAbonar" nillable="true" xmlns:q4="http://schemas.datacontract.org/2004/07/ws_pago_de_servicios_entidades" type="q4:ResponseAbonar" />
+							<xs:element minOccurs="0" name="request" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="signed" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="_ResponseConfirmaTransaccion" nillable="true" type="tns:_ResponseConfirmaTransaccion" />
+					<xs:complexType name="_ResponseConsultaProductos">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="RESPONSE" nillable="true" xmlns:q5="http://schemas.datacontract.org/2004/07/" type="q5:ResponseConsultaProductos" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="_ResponseConsultaProductos" nillable="true" type="tns:_ResponseConsultaProductos" />
+				</xs:schema>
+			</wsx:MetadataSection>
+			<wsx:MetadataSection xmlns="" Dialect="http://www.w3.org/2001/XMLSchema" Identifier="http://schemas.datacontract.org/2004/07/">
+				<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+					<xs:complexType name="ResponseConsultaProductos">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="MENSAJE" nillable="true" type="tns:RESPONSEMENSAJE" />
+							<xs:element minOccurs="0" name="PRODUCTOS" nillable="true" type="tns:ArrayOfproducto" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="ResponseConsultaProductos" nillable="true" type="tns:ResponseConsultaProductos" />
+					<xs:complexType name="RESPONSEMENSAJE">
+						<xs:sequence>
+							<xs:element name="cODIGOField" type="xs:unsignedByte" />
+							<xs:element name="tEXTOField" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="RESPONSEMENSAJE" nillable="true" type="tns:RESPONSEMENSAJE" />
+					<xs:complexType name="ArrayOfproducto">
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="producto" nillable="true" type="tns:producto" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="ArrayOfproducto" nillable="true" type="tns:ArrayOfproducto" />
+					<xs:complexType name="producto">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="hasDigitoVerificador" type="xs:boolean" />
+							<xs:element minOccurs="0" name="idCatTipoServicio" type="xs:unsignedByte" />
+							<xs:element minOccurs="0" name="idProducto" type="xs:unsignedShort" />
+							<xs:element minOccurs="0" name="idServicio" type="xs:unsignedShort" />
+							<xs:element minOccurs="0" name="legend" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="precio" type="xs:decimal" />
+							<xs:element minOccurs="0" name="producto" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="servicio" nillable="true" type="xs:string" />
+							<xs:element minOccurs="0" name="showAyuda" type="xs:boolean" />
+							<xs:element minOccurs="0" name="tipoFront" type="xs:unsignedByte" />
+							<xs:element minOccurs="0" name="tipoReferencia" nillable="true" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:element name="producto" nillable="true" type="tns:producto" />
+				</xs:schema>
+			</wsx:MetadataSection>
+		</Metadata>
+	</s:Body>
+</s:Envelope>
+
